@@ -10,7 +10,19 @@ import pink from '@material-ui/core/colors/pink';
 
 const styles = theme => ({
   button: {
-    margin: '100px',
+    backgroundColor: 'rgb(235, 89, 84)',
+    color: 'rgb(237,238,237)',
+    border: '2px solid rgb(237, 238, 237)',
+    height: '75px',
+    width: '150px',
+    padding: '20px',
+    fontSize: '13px',
+    borderRadius: '8px',
+    display: 'inline-block',
+    fontFamily: 'Handlee',
+    alignItems: 'center',
+    margin: '10px',
+    fontWeight: 800
   },
   cssRoot: {
     color: theme.palette.getContrastText(pink[200]),
@@ -30,17 +42,17 @@ const styles = theme => ({
 
 function Home(props) {
   const { classes } = props;
-        return (
-                    <div className="App" style={{backgroundImage: 'url(' + BackgroundImage + ')', width: '100%', height: '100%', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}>
-                        <header className="App-header">
-                            <h1>Firm Fatale</h1>
-                            <p className="subtitle">Helping women in business build their ideal femme-pire!</p>
+  return (
+    <div className="App" style={{ backgroundImage: 'url(' + BackgroundImage + ')', width: '100%', height: '100%', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', }}>
+      <header className="App-header">
+        <h1>Firm Fatale</h1>
+        <p className="subtitle">Helping women in business build their ideal femme-pire!</p>
 
-                            <Link to="/find-a-femme"><Button variant="contained" color="primary" size="large" variant="contained"className={classes.button, classes.cssRoot}>Find-a-Femme</Button></Link>
-                            <Link to="/card-share"><Button variant="contained" color="primary" size="large" variant="contained"className={classes.button, classes.cssRoot}>Card Share</Button></Link>
-                        </header>
+        <Link to="/find-a-femme"><Button variant="contained" color="primary" size="large" variant="contained" className={classes.button}>Find-a-Femme</Button></Link>
+      <Link to="/card-share"><Button variant="contained" color="primary" size="large" variant="contained" className={classes.button}>Card Share</Button></Link>
+                        </header >
                         
-                    </div>
+                    </div >
         );
 }
 
