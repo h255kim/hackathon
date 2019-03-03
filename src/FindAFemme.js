@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -18,14 +18,11 @@ const styles = theme => ({
    textAlign: 'center',
    color: theme.palette.text.secondary,
  },
- text: {
-   color: 'purple'
- }
 });
 
 const mapStyles = {
- width: '80%',
- height: '80%'
+ width: '100%',
+ height: '100%',
 };
 
 function FindAFemme(props) {
@@ -37,20 +34,22 @@ function FindAFemme(props) {
        <Grid item xs={12}>
          <Paper className={classes.paper}>Find-a-Femme</Paper>
        </Grid>
-       <Grid item xs={12}>
-         <Paper className={classes.paper} justify = "center" direction="column" alignItems = "center">
-         <Map
-                 google={google}
-                 zoom={14}
-                 style={mapStyles}
-                 initialCenter={{
-                  lat: -1.2884,
-                  lng: 36.8233
-                 }}
-               />
-         </Paper>
-       </Grid>
      </Grid>
+     <Map
+             google={google}
+             zoom={14}
+             style={mapStyles}
+             initialCenter={{lat: 43.0782811, lng: -77.6839168}} >
+            <Marker
+              title={'The marker`s title will appear as a tooltip.'}
+              name={'SOMA'}
+              position={{}}
+              icon={{
+                url: "http://www.bookyourparis.com/images-site/beachflag.png",
+                anchor: new google.maps.Point(32,32),
+                scaledSize: new google.maps.Size(64,64)}}/>
+      </Map>
+
    </div>
  );
 }
