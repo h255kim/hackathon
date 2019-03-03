@@ -22,11 +22,17 @@
   display: inline-block;
 }
 
+
+
 .btn{
-  background-color: white;
-  border-color: white;
-  height: 250px;
-  width: 300px;
+  background-color: rgb(235, 89, 84);
+  color: rgb(237,238,237);
+  border: 2px solid rgb(237, 238, 237);
+  height: 75px;
+  width: 150px;
+  padding:20px;
+  font-size: 15px;
+  border-radius: 8px;
   display: inline-block;
   font-family: Handlee;
   align-items: center;
