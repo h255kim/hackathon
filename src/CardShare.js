@@ -7,6 +7,11 @@ class CardShare extends Component {
         return (
                     <div className="App">
                         CardShare
+
+                        <body> {/* LinkedIn "button" ... consider using button instead of img tags */}
+                        <img src={"https://content.linkedin.com/content/dam/developer/global/en_US/site/img/signin-button.png"} onClick={}></img>
+                        </body>
+
                     </div>
         );
     }
